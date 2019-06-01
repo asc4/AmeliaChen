@@ -105,7 +105,7 @@
   </head>
   <body>
     <nav id="nav" style="text-align: center;">
-      <a href="https://asc4.github.io/AmeliaChen/" id="home-link">
+      <a href="{{ site.baseurl }}" id="home-link">
         <img src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/1305-smiley-happy-128.png"
               height="70" style="margin-top:15px">
       </a>
@@ -114,7 +114,7 @@
       {% assign sorted_artwork = site.artwork | sort: "weight" %}
       <ul class="gallery">
         {% for artwork in site.artwork %}
-          <li><img src="{{ site.baseurl }}{{ artwork.image_path }}"/></li>
+          <li><img src="{{ artwork.image_path }}"/></li>
         {% endfor %}
       </ul>
     </section>
