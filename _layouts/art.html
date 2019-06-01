@@ -113,11 +113,10 @@
       </a>
     </nav>
     <section id="info" class="row fabric center">
-      <img src="/assets/gallery/potat.jpg"/>
       {% assign sorted_artwork = site.artwork | sort: "weight" %}
       <ul class="gallery" style="list-style:none;">
         {% for art in site.artwork %}
-          <li><img src="{{ art.image_path }}"/></li>
+          <li><img src="{{ site.baseurl }}/{{ art.image_path }}"></li>
           <li>{{art.content}}</li>
         {% endfor %}
       </ul>
