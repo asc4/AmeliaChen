@@ -116,8 +116,7 @@
       {% assign sorted_artwork = site.artwork | sort: "weight" %}
       <ul class="gallery" style="list-style:none;">
         {% for art in site.artwork %}
-          <li><img src="{{ site.baseurl }}/{{ art.image_path }}"></li>
-          <li>{{art.content}}</li>
+          <li><img src="{{ site.baseurl }}/assets/gallery/{{ art.image_path }}"></li>
         {% endfor %}
       </ul>
     </section>
