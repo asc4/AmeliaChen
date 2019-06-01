@@ -105,7 +105,7 @@
   </head>
   <body>
     <nav id="nav" style="text-align: center;">
-      <a href="{{ site.baseurl }}" id="home-link">
+      <a href="{{ site.baseurl }}/" id="home-link">
         <img src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/1305-smiley-happy-128.png"
               height="70" style="margin-top:15px">
       </a>
@@ -113,8 +113,9 @@
     <section id="info" class="row fabric center">
       {% assign sorted_artwork = site.artwork | sort: "weight" %}
       <ul class="gallery" style="list-style:none;">
-        {% for artwork in site.artwork %}
-          <li><img src="{{ artwork.image_path }}"/></li>
+        {% for art in site.artwork %}
+          <li><img src="{{ art.image_path }}"/></li>
+          <li>{{art.content}}</li>
         {% endfor %}
       </ul>
     </section>
