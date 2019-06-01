@@ -1,0 +1,162 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Amelia Chen</title>
+
+<!-- MIGRATE TO STYLESHEET LATER -->
+    <!-- google fonts start -->
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,600|East+Sea+Dokdo&display=swap" rel="stylesheet">
+
+    <!-- google fonts end -->
+    <style>
+
+      /* responsive grid start */
+      * {
+        box-sizing: border-box;
+      }
+      .col-1 {width: 8.33%;}
+      .col-2 {width: 16.66%;}
+      .col-3 {width: 25%;}
+      .col-4 {width: 33.33%;}
+      .col-5 {width: 41.66%;}
+      .col-6 {width: 50%;}
+      .col-7 {width: 58.33%;}
+      .col-8 {width: 66.66%;}
+      .col-9 {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}
+      [class*="col-"] {
+        float: left;
+        padding: 15px;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      /* responsive grid end */
+
+      body {
+        background-color: #FDB900;
+        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+        font-family: 'Assistant', sans-serif;
+        font-size: 40px;
+        font-weight: 200;
+        color: white;
+      }
+
+      #home {
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+      }
+
+      #landing-text {
+        font-family: 'East Sea Dokdo', cursive;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 70px;
+      }
+
+      .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      #about-link {
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+      }
+
+      #about-link:hover {
+
+      }
+
+      .home-interactive-link {
+        text-decoration: none;
+        font-weight: 400;
+        color: #01B8C0;
+        /* color: white;
+        text-shadow: -2px -2px 0 #FF2AB6, 2px -2px 0 #FF2AB6,
+                     -2px 2px 0 #FF2AB6, 2px 2px 0 #FF2AB6; */
+        flex: 1;
+        /* rgb(234,101,112,0.9) = #EB6570 */
+        /* background-image: linear-gradient(to right, rgb(234,101,112,0.9) 0, rgb(234,101,112,0.6) 100%); */
+        background-image: linear-gradient(to right, yellow 0, yellow 100%);
+        background-position: 0 1.2em;
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: background .5s;
+        background-position: 10px -20px;
+      }
+      .home-interactive-link:hover {
+        background-size: 100% 100%;
+      }
+
+
+      #writing-link:hover {
+
+      }
+
+      #drawing-link:hover {
+
+      }
+
+      #blog-link:hover {
+
+      }
+
+      .icon {
+        /* source: https://www.iconfinder.com/iconsets/jolly-icons-social-media-and-communication */
+        width: 40px;
+      }
+
+      @keyframes fade-in-top {
+        from {
+          opacity: 0;
+          transform: translateY(-15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+      .agent-1, .agent-2 {
+        opacity: 0;
+        animation: fade-in-top ease 1s forwards;
+        animation-delay:0.3s;
+      }
+      .agent-2 { animation-delay: 0.4s }
+
+    </style>
+  </head>
+  <body>
+    <section id="home" class="row">
+        <div id="landing-text" class="center">
+          <div class="agent-1">
+            <a href="about" id="about-link" class="home-interactive-link">Amelia Chen</a> is
+            <a href="about#published" class="home-interactive-link"id="writing-link">writing</a>,
+            <a href="art" class="home-interactive-link" id="drawing-link">drawing</a>, &
+            <a href="#" class="home-interactive-link" id="blog-link">adventuring</a>.
+          </div>
+          <div class="agent-2">
+            <a href="https://twitter.com/mielzyscribbles"><img class="icon" alt="Twitter" src="https://www.shareicon.net/download/2015/08/22/89130_network.ico"></a>
+            <a href="https://github.com/asc4"><img class="icon" alt="Github" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/2014-social-github-octocat-512.png"></a>
+            <a href="https://www.linkedin.com/in/amelia-chen-2018/"><img class="icon" alt="LinkedIn" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/2015-social-linkedin-128.png"></a>
+            <a href="mailto:Amelia.S.Chen@williams.edu"><img class="icon" alt="Email" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/0201-mail-128.png"></a>
+          </div>
+        </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About Amelia Chen</title>
+
+<!-- MIGRATE TO STYLESHEET LATER -->
+    <!-- google fonts start -->
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+    <!-- google fonts end -->
+    <style>
+
+      /* responsive grid start */
+      * {
+        box-sizing: border-box;
+      }
+      @media (min-width: 1200px) {
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        [class*="col-"] {
+          float: left;
+          padding: 15px;
+        }
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      /* responsive grid end */
+
+      body {
+        background-color: #FDB900;
+        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+        font-family: 'Assistant', sans-serif;
+        font-size: 40px;
+        font-weight: 200;
+        color: white;
+      }
+
+      #home-link {
+        text-decoration: none;
+        font-family: 'East Sea Dokdo', cursive;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 40px;
+        color: #01B8C0;
+        margin: 1%;
+      }
+
+      #info {
+        /* position: absolute; */
+        overflow: auto;
+        height: 80%;
+        width: 80%;
+        /* border-style: solid; */
+      }
+
+      #info::-webkit-scrollbar {
+        display: none;
+      }
+
+      .center {
+        margin: 0;
+        margin-top: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .paper-red {
+        background-image: url("https://www.kingdomandsparrow.co.uk/wp-content/uploads/2017/03/wildtextures-seamless-square-pattern-paper-texture.jpg");
+        background-repeat: repeat;
+        background-size: 200px;
+        font-family: 'East Sea Dokdo', cursive;
+        color: black;
+      }
+
+      .paper-blue {
+        background-image: url("https://media.istockphoto.com/photos/blue-seamless-millimeter-paper-background-tiling-graph-grid-texture-picture-id937829066?k=6&m=937829066&s=170667a&w=0&h=rmwgAW1mQ7ZMRAu6pvm9kF6zMaws5TR1kXb3rOqkDW4=");
+        background-repeat: repeat;
+        background-size: 400px;
+        font-family: 'East Sea Dokdo', cursive;
+        color: black;
+      }
+
+      .fabric {
+        background-image: url("https://www.cheatersutopia.com/img/p3DlYzEypT9mnKEjnT90o3ZhL29gYmDjAmV1AmHiZGN4BQpinF85AGNiMTIjo3AcqUObo3Eip18kZQt4AmVkZwLgp3EiL2fgpTuiqT8gLzIcM2HgoTyhMJ4gL2ShqzSmYKAyLJ1fMKAmYKAkqJSlMF5dpTp/beige-linen-canvas-seamless-square-texture-tile-ready-stock.jpg");
+        background-repeat: repeat;
+        background-size: 100px;
+      }
+
+      #profile-pic {
+        margin-left: 15%;
+        margin-top: 10%;
+        background-image: url("https://instagram.fbed1-1.fna.fbcdn.net/vp/155ddacd815839467b651e2e40c54053/5D92CA37/t51.2885-15/sh0.08/e35/s640x640/59842110_450557532369180_3570480663539253852_n.jpg?_nc_ht=instagram.fbed1-1.fna.fbcdn.net");
+        background-size: 450px;
+        z-index: 1;
+      }
+
+      .cropcircle {
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        background: #eee no-repeat center;
+        background-size: cover;
+      }
+
+      .highlight {
+        font-family: 'East Sea Dokdo', cursive;
+        color: white;
+        text-align: left;
+        font-size: 80px;
+      }
+
+      .descr {
+        color: black;
+        font-size: 20px;
+        text-align: justify;
+        margin-left: 15px;
+        line-height: 33px;
+      }
+
+      .note-container p {
+        margin: -15px;
+        margin-bottom: 20px;
+        padding: none;
+      }
+
+      .note-container a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .title-thing {
+        text-align: left;
+        font-size: 50px;
+        line-height: 40px;
+      }
+
+      .descr-thing {
+        text-align: right;
+        font-size: 30px;
+        line-height: 28px;
+      }
+
+      .icon {
+        /* source: https://www.iconfinder.com/iconsets/jolly-icons-social-media-and-communication */
+        width: 30px;
+      }
+
+      footer {
+        position: fixed;
+        left:0;
+        bottom:0;
+        width:100%;
+        padding-left: 15px;
+        text-align: center;
+      }
+
+      @keyframes fade-in-top {
+        from {
+          opacity: 0;
+          transform: translateY(-15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+      .agent-1, .agent-2, .agent-3 {
+        opacity: 0;
+        animation: fade-in-top ease 1s forwards;
+      }
+      .agent-2 { animation-delay: 0.2s }
+      .agent-3 { animation-delay: 0.4s }
+
+      /* want to animate it so that hover on one icon reveals more icons */
+      .menu {
+
+      }
+
+    </style>
+  </head>
+  <nav id="nav" style="text-align: center;">
+    <a href="{{ site.url }}" id="home-link">
+      <img src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/1305-smiley-happy-128.png"
+            height="70" style="margin-top:15px">
+    </a>
+  </nav>
+  <body>
+    <section id="info" class="center">
+      <div class="row agent-1">
+        <div class="col-3 paper-red">
+          <div id="profile-pic" class="cropcircle"></div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-8" style="vertical-align:bottom;margin-top:100px;">
+          <div class="highlight">Hi! I'm <a style="color:#EB6570;">Amelia</a>.</div>
+          <div class="descr">
+            I'm a writer. I'm an artist. I'm a student currently studying at Williams College.
+            I coded this website with my ten fingers, my brain, and my battered ol' laptop.
+            In essence, I am a maker. I enjoy creating things from nothing.
+            You can learn more by scrolling down!
+          </div>
+        </div>
+      </div>
+      <div class="row agent-2" style="margin-top:50px;">
+        <div class="col-3">
+          <!-- <div class="highlight" style="text-align:right; line-height:50px;">So I've been <a style="color:#EB6570;">published</a></div> -->
+        </div>
+        <div class="col-1"></div>
+        <div id="published" class="col-8 paper-red note-container">
+          <div class="paper-blue" style="margin: 20px 0px 70px 30px;width:230px;font-size:60px;letter-spacing:12px;padding-left:30px;"><a style="background-color:#01D0D8;opacity:.85">&nbsp;PUBLISHED</a></div>
+          <div  style="padding: 0% 10% 8%;">
+                <p class="title-thing" style="font-family:'ZCOOL KuaiLe', cursive;font-size:40px;"><a href="https://sinetheta.net/issue10.html" target="_blank" >满意吗?</a></p><p class="descr-thing">2019  Sine Theta Magazine</p>
+            <br><p class="title-thing"><a href="https://sinetheta.net/issue08.html" target="_blank" >Golden Red Kites</a></p><p class="descr-thing">2018 Sine Theta Magazine</p>
+            <br><p class="title-thing"><a href="https://www.recorder.com/Poetry-contest-17075430" target="_blank" >From</a></p><p class="descr-thing">2018 Youth Winner, Franklin County's<br>27th Annual Poet's Seat Poetry Contest</p>
+            <br><p class="title-thing"><a href="https://themarblecollection.org/magazine/archive/spring-2017/fiction/the-disaster-of-forever/" target="_blank" >The Disaster of Forever<a></p><p class="descr-thing">2017 The Marble Collection</p>
+          </div>
+        </div>
+      </div>
+      <div class="row agent-3" style="margin-top:50px;">
+       <div class="col-8 paper-red note-container" >
+          <div class="paper-blue" style="margin: 20px 0px 60px 30px;width:230px;font-size:60px;letter-spacing:12px;padding-left:30px;"><a style="background-color:#EB6570;opacity:.85">&nbsp;ACHIEVEMENTS</a></div>
+          <div  style="padding: 0% 10% 8%;">
+                <p class="title-thing">Lex Allen Literary Festival</p><p class="descr-thing">2019 Fiction Prize Finalist</p>
+            <br><p class="title-thing">Google 4 Doodle</p><p class="descr-thing">2018 Massachusetts Finalist</p>
+            <br><p class="title-thing"><a href="http://www.theadroitjournal.org/mentorship/" target="_blank">The Adroit Journal <br>Summer Mentorship Program</a></p><p class="descr-thing">2018 Fiction Mentee</p>
+            <br><p class="title-thing">National Merit Scholarship Program</p><p class="descr-thing">2018 Scholarship Finalist</p>
+            <br><p class="title-thing">Scholastic Art & Writing Awards</p><p class="descr-thing">(MASSACHUSETTS)
+                                                                                                  <br>2018 REGIONAL GOLD KEY, Short Story<br>REGIONAL HONORABLE MENTION, Science Fiction/Fantasy<br>2017 REGIONAL SILVER KEY, Short Story</p>
+            <br><p class="title-thing"><a href="https://www.fpspi.org/scenario-writing/" target="_blank">FPSPI Scenario Writing Competition</a></p><p class="descr-thing">(MASSACHUSETTS AFFILIATE)
+                                                                                                    <br>2017 FIRST PLACE WINNER, Senior Division</p>
+          </div>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-1"></div>
+      </div>
+      <!-- <div class="row highlight paper-blue" style="margin:50px 250px;text-align:center;font-size:60px;color:black">
+        <a style="background-color:#01D0D8;opacity:0.85;">&nbsp;Williams College&nbsp;</a> 2022
+      </div> -->
+    </section>
+  </body>
+  <footer>
+    <div class="row menu">
+      <a href="https://twitter.com/mielzyscribbles"><img class="icon" alt="Twitter" src="https://www.shareicon.net/download/2015/08/22/89130_network.ico"></a>
+      <a href="https://github.com/asc4"><img class="icon" alt="Github" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/2014-social-github-octocat-512.png"></a>
+      <a href="https://www.linkedin.com/in/amelia-chen-2018/"><img class="icon" alt="LinkedIn" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/2015-social-linkedin-128.png"></a>
+      <a href="mailto:Amelia.S.Chen@williams.edu"><img class="icon" alt="Email" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/0201-mail-128.png"></a>
+    </div>
+  </footer>
+</html>

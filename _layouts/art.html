@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Amelia Chen</title>
+
+<!-- MIGRATE TO STYLESHEET LATER -->
+    <!-- google fonts start -->
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,600|East+Sea+Dokdo&display=swap" rel="stylesheet">
+
+    <!-- google fonts end -->
+    <style>
+
+      /* responsive grid start */
+      * {
+        box-sizing: border-box;
+      }
+      @media (min-width: 1200px) {
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        [class*="col-"] {
+          float: left;
+          padding: 15px;
+        }
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      /* responsive grid end */
+
+      body {
+        background-color: #FDB900;
+        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+        font-family: 'Assistant', sans-serif;
+        font-size: 40px;
+        font-weight: 200;
+        color: white;
+      }
+
+      #home-link {
+        text-decoration: none;
+        font-family: 'East Sea Dokdo', cursive;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 40px;
+        color: #01B8C0;
+        margin: 1%;
+      }
+
+      #info {
+        position: absolute;
+        overflow: auto;
+        height: 80%;
+        width: 80%;
+      }
+
+      #info::-webkit-scrollbar {
+        display: none;
+      }
+
+      .center {
+        margin: 0;
+        margin-top: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .fabric {
+        background-image: url("https://www.cheatersutopia.com/img/p3DlYzEypT9mnKEjnT90o3ZhL29gYmDjAmV1AmHiZGN4BQpinF85AGNiMTIjo3AcqUObo3Eip18kZQt4AmVkZwLgp3EiL2fgpTuiqT8gLzIcM2HgoTyhMJ4gL2ShqzSmYKAyLJ1fMKAmYKAkqJSlMF5dpTp/beige-linen-canvas-seamless-square-texture-tile-ready-stock.jpg");
+        background-repeat: repeat;
+        background-size: 100px;
+      }
+
+      .icon {
+        /* source: https://www.iconfinder.com/iconsets/jolly-icons-social-media-and-communication */
+        width: 30px;
+      }
+
+      footer {
+        position: fixed;
+        left:0;
+        bottom:0;
+        width:100%;
+        padding-left: 15px;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav id="nav" style="text-align: center;">
+      <a href="{{ site.url }}" id="home-link">
+        <img src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/1305-smiley-happy-128.png"
+              height="70" style="margin-top:15px">
+      </a>
+    </nav>
+    <section id="info" class="row fabric center">
+      {% assign sorted_artwork = site.artwork | sort: "weight" %}
+      <ul class="gallery">
+        {% for artwork in site.artwork %}
+          <li><img src="{{ artwork.image_path }}"/></li>
+        {% endfor %}
+      </ul>
+    </section>
+  </body>
+  <footer>
+    <div class="row menu">
+      <a href="https://twitter.com/mielzyscribbles"><img class="icon" alt="Twitter" src="https://www.shareicon.net/download/2015/08/22/89130_network.ico"></a>
+      <a href="https://github.com/asc4"><img class="icon" alt="Github" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/2014-social-github-octocat-512.png"></a>
+      <a href="https://www.linkedin.com/in/amelia-chen-2018/"><img class="icon" alt="LinkedIn" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/2015-social-linkedin-128.png"></a>
+      <a href="mailto:Amelia.S.Chen@williams.edu"><img class="icon" alt="Email" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/0201-mail-128.png"></a>
+    </div>
+  </footer>
+</html>
