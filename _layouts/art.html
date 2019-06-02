@@ -103,6 +103,49 @@
         text-align: center;
       }
 
+        #gallery {
+          column-count: 3;
+          column-gap: 1em;
+          padding: 40px;
+        }
+
+      @media (max-width: 1000px) {
+        #gallery {
+          column-count: 2;
+          column-gap: 1em;
+          padding: 40px;
+        }
+      }
+
+      @media (max-width: 650px) {
+        #gallery {
+          column-count: 1;
+          column-gap: 1em;
+          padding: 40px;
+        }
+      }
+
+      .gallery-item {
+        width: 100%;
+
+        /* min-width: 300px; */
+      }
+
+      .gallery-item img {
+        max-width: 100%;
+      }
+
+      @media (max-width: 600px) {
+        .gallery {
+          grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        }
+      }
+      @media (max-width: 400px) {
+        .gallery {
+          grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -114,11 +157,11 @@
     </nav>
     <section id="info" class="row fabric center">
       {% assign sorted_artwork = site.artwork | sort: "weight" %}
-      <ul class="gallery" style="list-style:none;">
+      <div id="gallery" style="list-style:none;">
         {% for art in site.artwork %}
-          <li><img src="{{ site.baseurl }}/assets/gallery/{{ art.image_path }}"></li>
+          <div class="gallery-item"><img src="{{ site.baseurl }}/assets/gallery/{{ art.image_path }}"></div>
         {% endfor %}
-      </ul>
+      </div>
     </section>
   </body>
   <footer>
