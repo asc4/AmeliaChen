@@ -147,6 +147,23 @@
         }
       }
 
+      @keyframes fade-in-top {
+        from {
+          opacity: 0;
+          transform: translateY(-15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+      .animated {
+        opacity: 0;
+        animation: fade-in-top ease 1s forwards;
+        animation-delay:0.3s;
+      }
+
     </style>
   </head>
   <body>
@@ -155,7 +172,7 @@
       {% assign sorted_artwork = site.artwork | sort: "weight" %}
       <div id="gallery" style="list-style:none;">
         {% for art in site.artwork %}
-          <div class="gallery-item"><img src="{{ site.baseurl }}/assets/gallery/{{ art.image_path }}"></div>
+          <div class="gallery-item animated"><img src="{{ site.baseurl }}/assets/gallery/{{ art.image_path }}"></div>
         {% endfor %}
       </div>
     </section>
