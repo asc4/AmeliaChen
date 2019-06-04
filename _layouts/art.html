@@ -164,6 +164,51 @@
         animation-delay:0.3s;
       }
 
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0);
+        transition: background 0.5s ease;
+      }
+
+      .gallery-item:hover .overlay {
+        display: block;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      button {
+        opacity: 0;
+        text-align: center;
+        text-transform: uppercase;
+        transition: opacity .35s ease;
+        background:none;
+        border-style: solid;
+        border-color: white;
+        color: white;
+        font-size: 30px;
+        font-family: 'Assistant', sans-serif;
+      }
+
+      button:hover {
+        background-color: white;
+        color: rgba(0, 0, 0, 0.5);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .gallery-item:hover button {
+        opacity: 1;
+      }
+
+      .modal {
+        position: fixed;
+        background: white;
+        display: none;
+        z-index: 3;
+      }
+
     </style>
   </head>
   <body>
@@ -172,10 +217,21 @@
       {% assign sorted_artwork = site.artwork | sort: "weight" %}
       <div id="gallery" style="list-style:none;">
         {% for art in site.artwork %}
-          <div class="gallery-item animated"><img src="{{ site.baseurl }}/assets/gallery/{{ art.image_path }}"></div>
+          <div class="gallery-item animated">
+            <img src="{{ site.baseurl }}/assets/gallery/{{ art.image_path }}">
+            <div class="overlay">
+              <button class="view_button center" style="margin-top:-4%;">more info coming soon</button>
+            </div>
+            <div id="" class="modal">
+              oh my
+            </div>
+          </div>
         {% endfor %}
       </div>
     </section>
+    <script>
+
+    </script>
   </body>
   {% include row_menu.html %}
 </html>
