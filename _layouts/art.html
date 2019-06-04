@@ -44,7 +44,7 @@
 
       body {
         background-color: #FDB900;
-        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+        background-image: url({{ site.baseurl }}/assets/textures/asfalt-light.png);
         font-family: 'Assistant', sans-serif;
         font-size: 40px;
         font-weight: 200;
@@ -83,8 +83,9 @@
         text-align: center;
       }
 
-      .fabric {
-        background-image: url("https://www.cheatersutopia.com/img/p3DlYzEypT9mnKEjnT90o3ZhL29gYmDjAmV1AmHiZGN4BQpinF85AGNiMTIjo3AcqUObo3Eip18kZQt4AmVkZwLgp3EiL2fgpTuiqT8gLzIcM2HgoTyhMJ4gL2ShqzSmYKAyLJ1fMKAmYKAkqJSlMF5dpTp/beige-linen-canvas-seamless-square-texture-tile-ready-stock.jpg");
+      .texture {
+        background-color: white;
+        background-image: url("https://www.transparenttextures.com/patterns/asfalt.png");
         background-repeat: repeat;
         background-size: 100px;
       }
@@ -149,13 +150,8 @@
     </style>
   </head>
   <body>
-    <nav id="nav" style="text-align: center;">
-      <a href="{{ site.baseurl }}/" id="home-link">
-        <img src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/1305-smiley-happy-128.png"
-              height="70" style="margin-top:15px">
-      </a>
-    </nav>
-    <section id="info" class="row fabric center">
+    {% include short_nav.html %}
+    <section id="info" class="row texture center">
       {% assign sorted_artwork = site.artwork | sort: "weight" %}
       <div id="gallery" style="list-style:none;">
         {% for art in site.artwork %}
@@ -164,12 +160,5 @@
       </div>
     </section>
   </body>
-  <footer>
-    <div class="row menu">
-      <a href="https://twitter.com/mielzyscribbles"><img class="icon" alt="Twitter" src="https://www.shareicon.net/download/2015/08/22/89130_network.ico"></a>
-      <a href="https://github.com/asc4"><img class="icon" alt="Github" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/2014-social-github-octocat-512.png"></a>
-      <a href="https://www.linkedin.com/in/amelia-chen-2018/"><img class="icon" alt="LinkedIn" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/2015-social-linkedin-128.png"></a>
-      <a href="mailto:Amelia.S.Chen@williams.edu"><img class="icon" alt="Email" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/0201-mail-128.png"></a>
-    </div>
-  </footer>
+  {% include row_menu.html %}
 </html>

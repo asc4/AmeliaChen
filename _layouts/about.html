@@ -45,7 +45,7 @@
 
       body {
         background-color: #FDB900;
-        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+        background-image: url({{ site.baseurl }}/assets/textures/asfalt-light.png);
         font-family: 'Assistant', sans-serif;
         font-size: 40px;
         font-weight: 200;
@@ -86,7 +86,7 @@
       }
 
       .paper-red {
-        background-image: url("https://www.kingdomandsparrow.co.uk/wp-content/uploads/2017/03/wildtextures-seamless-square-pattern-paper-texture.jpg");
+        background-image: url({{ site.baseurl }}/assets/textures/paper_red.jpg);
         background-repeat: repeat;
         background-size: 200px;
         font-family: 'East Sea Dokdo', cursive;
@@ -94,23 +94,17 @@
       }
 
       .paper-blue {
-        background-image: url("https://media.istockphoto.com/photos/blue-seamless-millimeter-paper-background-tiling-graph-grid-texture-picture-id937829066?k=6&m=937829066&s=170667a&w=0&h=rmwgAW1mQ7ZMRAu6pvm9kF6zMaws5TR1kXb3rOqkDW4=");
+        background-image: url({{ site.baseurl }}/assets/textures/paper_blue.jpg);
         background-repeat: repeat;
         background-size: 400px;
         font-family: 'East Sea Dokdo', cursive;
         color: black;
       }
 
-      .fabric {
-        background-image: url("https://www.cheatersutopia.com/img/p3DlYzEypT9mnKEjnT90o3ZhL29gYmDjAmV1AmHiZGN4BQpinF85AGNiMTIjo3AcqUObo3Eip18kZQt4AmVkZwLgp3EiL2fgpTuiqT8gLzIcM2HgoTyhMJ4gL2ShqzSmYKAyLJ1fMKAmYKAkqJSlMF5dpTp/beige-linen-canvas-seamless-square-texture-tile-ready-stock.jpg");
-        background-repeat: repeat;
-        background-size: 100px;
-      }
-
       #profile-pic {
         margin-left: 15%;
         margin-top: 10%;
-        background-image: url("https://instagram.fbed1-1.fna.fbcdn.net/vp/155ddacd815839467b651e2e40c54053/5D92CA37/t51.2885-15/sh0.08/e35/s640x640/59842110_450557532369180_3570480663539253852_n.jpg?_nc_ht=instagram.fbed1-1.fna.fbcdn.net");
+        background-image: url({{ site.baseurl }}/assets/textures/profile.jpg);
         background-size: 450px;
         z-index: 1;
       }
@@ -200,12 +194,7 @@
 
     </style>
   </head>
-  <nav id="nav" style="text-align: center;">
-    <a href="{{ site.baseurl }}/" id="home-link">
-      <img src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/1305-smiley-happy-128.png"
-            height="70" style="margin-top:15px">
-    </a>
-  </nav>
+  {% include short_nav.html %}
   <body>
     <section id="info" class="center">
       <div class="row agent-1">
@@ -260,12 +249,5 @@
       </div> -->
     </section>
   </body>
-  <footer>
-    <div class="row menu">
-      <a href="https://twitter.com/mielzyscribbles"><img class="icon" alt="Twitter" src="https://www.shareicon.net/download/2015/08/22/89130_network.ico"></a>
-      <a href="https://github.com/asc4"><img class="icon" alt="Github" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/2014-social-github-octocat-512.png"></a>
-      <a href="https://www.linkedin.com/in/amelia-chen-2018/"><img class="icon" alt="LinkedIn" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/2015-social-linkedin-128.png"></a>
-      <a href="mailto:Amelia.S.Chen@williams.edu"><img class="icon" alt="Email" src="https://cdn4.iconfinder.com/data/icons/jolly-icons-social-media-and-communication/120/0201-mail-128.png"></a>
-    </div>
-  </footer>
+  {% include row_menu.html %}
 </html>
